@@ -22,11 +22,11 @@ page_routes = {
     "About": "pages/9_About.py",
 }
 
-if current_page in page_routes:
-    target_file = Path(__file__).resolve().parent / page_routes[current_page]
+target_page = page_routes.get(current_page)
+if target_page:
+    target_file = Path(__file__).resolve().parent / target_page
     if target_file.exists():
-        with st.spinner("Loading page..."):
-            runpy.run_path(str(target_file), run_name="__main__")
+        runpy.run_path(str(target_file), run_name="__main__")
     else:
         st.error(f"Page not found: {target_file}")
     st.stop()
@@ -48,7 +48,7 @@ st.markdown(
             <p>One page for every detection tool, with direct navigation links to all model workflows and threat scans.</p>
         </div>
     </div>
-    """,
+    """, 
     unsafe_allow_html=True,
 )
 
