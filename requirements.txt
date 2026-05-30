@@ -11,6 +11,11 @@ matplotlib==3.10.9
 seaborn==0.13.2
 SpeechRecognition==3.10.1
 requests==2.31.0
+pydub==0.25.1
+imageio-ffmpeg==0.6.0
+# pyaudioop may be needed for certain Python versions to support pydub audioop compatibility
+# If you get audio conversion import errors, install: pyaudioop
+# pyaudioop==0.1.0
 tqdm==4.66.4
 
 # Optional packages

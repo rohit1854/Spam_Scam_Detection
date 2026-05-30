@@ -459,6 +459,26 @@ header {
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
 }
 
+.audio-input-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #bae6fd;
+    margin-bottom: 12px;
+}
+
+.audio-input-label span {
+    font-size: 1.15rem;
+}
+
+.audio-input-note {
+    color: #94a3b8;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
 /* 📊 Progress */
 .stProgress > div > div {
     background: linear-gradient(90deg, #38bdf8, #818cf8);
